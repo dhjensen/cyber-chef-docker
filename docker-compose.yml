@@ -2,9 +2,9 @@ name: Cyber chef
 
 services:
   cyberchef:
-    image: ghcr.io/gchq/cyberchef:${CYBERCHEF_VERSION}
+    image: mpepping/cyberchef:v${CYBERCHEF_VERSION}
     ports:
-      - "127.0.0.1:8000:80"
+      - "127.0.0.1:8000:8000"
     networks:
       - nginx-proxy-manager_frontend
 

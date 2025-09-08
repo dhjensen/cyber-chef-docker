@@ -1,6 +1,6 @@
 # cyber-chef-docker
 
-Using the offical [CyberChef](https://github.com/gchq/CyberChef) project docker image
+Using the unoffical [CyberChef](https://hub.docker.com/r/mpepping/cyberchef) docker image as the official one does not have arm64 support
 
 ## .env example
 
