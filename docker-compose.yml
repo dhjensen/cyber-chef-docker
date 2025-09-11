@@ -3,10 +3,15 @@ name: Cyber chef
 services:
   cyberchef:
     image: mpepping/cyberchef:v${CYBERCHEF_VERSION}
+    container_name: cyberchef
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - "127.0.0.1:8000:8000"
     networks:
       - nginx-proxy-manager_frontend
+    labels:
+      - wud.tag.include=^v\d+\.\d+\.\d+$$
 
 networks:
   nginx-proxy-manager_frontend:
