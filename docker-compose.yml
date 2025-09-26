@@ -10,10 +10,16 @@ services:
       - "127.0.0.1:8000:8000"
     networks:
       - nginx-proxy-manager_frontend
+      - backend
     labels:
       - wud.tag.include=^v\d+\.\d+\.\d+$$
+      - traefik.enable=true
+      - traefik.http.routers.cyberchef-cyberchef.rule=Host(`cyberchef.dhjensen.tech`)
 
 networks:
+  backend:
+    driver: bridge
+    external: true
   nginx-proxy-manager_frontend:
     driver: bridge
     external: true
